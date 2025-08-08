@@ -4,7 +4,7 @@ This repository contains the source code for a research project focused on the d
 
 ## 📖 Overview
 
-The proliferation of advanced Text-to-Speech (TTS) and Voice Conversion (VC) systems has led to the emergence of highly realistic synthetic speech, commonly referred to as audio deepfakes. The potential for malicious use of such technology, including fraud and the dissemination of misinformation, necessitates the development of robust detection countermeasures. This project presents a sophisticated detection framework that extends beyond conventional acoustic analysis by incorporating prosodic features—which encompass the rhythm, stress, and intonation of speech. By performing a multi-modal analysis of both the spectral content and the prosodic delivery of an utterance, the proposed model learns a more comprehensive and discriminative representation to differentiate between bona fide and synthetically generated audio.
+The emergence of hyper-realistic synthetic speech from advanced TTS and VC systems presents a growing threat. These "audio deepfakes" can be weaponized for fraud, impersonation, and propaganda, making robust detection a critical necessity. Our project addresses this challenge with a novel framework that moves beyond standard acoustic analysis. We incorporate prosodic features—the musicality of speech, including its rhythm and intonation—to create a more holistic analysis. By evaluating both the sound itself and the way it is spoken, our model can more accurately distinguish between genuine human speech and its synthetic counterparts.
 
 ## 🎯 Key Contributions
 
