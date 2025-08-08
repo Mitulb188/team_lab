@@ -1,42 +1,43 @@
-Combining Prosodic and Acoustic Features for Audio Deepfake Detection
-This repository contains the source code for the research project on detecting audio deepfakes by fusing acoustic and prosodic features. The primary model uses a cross-attention mechanism to effectively combine these modalities.
+# Combining Prosodic and Acoustic Features for Audio Deepfake Detection
 
-📖 Overview
-The rise of highly realistic Text-to-Speech (TTS) and Voice Conversion (VC) systems has created a new threat: audio deepfakes. These synthetic voices pose serious risks, from fraud to the spread of disinformation. This project develops a robust detection system that goes beyond traditional acoustic analysis by also considering prosody—the rhythm, stress, and intonation of speech. By analyzing both what is said (spectral content) and how it is said (prosodic delivery), our model learns a more comprehensive representation to distinguish between genuine and fake audio.
+This repository contains the source code for a research project focused on the detection of audio deepfakes through the fusion of acoustic and prosodic features. The primary model employs a cross-attention mechanism to effectively integrate these distinct modalities.
 
-🎯 Project Achievements
-State-of-the-Art Model: Developed a novel cross-attention Transformer model that successfully fuses acoustic (CQCC) and prosodic features.
+## 📖 Overview
 
-High-Performance Detection: The proposed model achieved a test Equal Error Rate (EER) of 6.68% on the ASVspoof 2019 LA dataset.
+The proliferation of advanced Text-to-Speech (TTS) and Voice Conversion (VC) systems has led to the emergence of highly realistic synthetic speech, commonly referred to as audio deepfakes. The potential for malicious use of such technology, including fraud and the dissemination of misinformation, necessitates the development of robust detection countermeasures. This project presents a sophisticated detection framework that extends beyond conventional acoustic analysis by incorporating prosodic features—which encompass the rhythm, stress, and intonation of speech. By performing a multi-modal analysis of both the spectral content and the prosodic delivery of an utterance, the proposed model learns a more comprehensive and discriminative representation to differentiate between bona fide and synthetically generated audio.
 
-Critical Feature Insights: Our ablation studies demonstrated that a small, well-chosen set of 6 prosodic features (with HNR and shimmer being most important) can outperform a much larger set of 23, highlighting the importance of careful feature selection.
+## 🎯 Key Contributions
 
-⚙️ Methodology
-The core of our approach is a deep learning model that processes two distinct feature streams from an audio input.
+* **Novel Architecture Development:** A cross-attention Transformer model was successfully developed and implemented to fuse acoustic (CQCC) and prosodic feature sets for enhanced classification.
+* **High-Performance Detection:** The proposed model demonstrates state-of-the-art performance, achieving a test Equal Error Rate (EER) of 6.68% on the standardized ASVspoof 2019 LA dataset.
+* **Empirical Feature Analysis:** Ablation studies provided critical insights into feature importance, demonstrating that a judiciously selected set of six prosodic features, particularly Harmonics-to-Noise Ratio (HNR) and shimmer, can yield superior performance compared to a larger, more comprehensive set of 23 features.
 
-Acoustic Features: We use Constant Q Cepstral Coefficients (CQCC) to capture the spectral texture and timbre of the audio.
+## ⚙️ Methodology
 
-Prosodic Features: We extract features like fundamental frequency (F0), jitter, shimmer, and Harmonics-to-Noise Ratio (HNR) using Parselmouth and openSMILE to model the speech's delivery.
+The core of the proposed methodology is a deep learning model engineered to process two distinct feature streams extracted from an input audio signal.
 
-Cross-Attention Fusion: A Transformer-based architecture uses the prosodic features to query the acoustic feature representations, allowing the model to focus on the most relevant spectral information in a given prosodic context.
+1.  **Acoustic Feature Extraction:** Constant Q Cepstral Coefficients (CQCC) are utilized to capture the spectral texture and timbral characteristics of the audio.
+2.  **Prosodic Feature Extraction:** Features corresponding to fundamental frequency (F0), jitter, shimmer, and Harmonics-to-Noise Ratio (HNR) are extracted using the Parselmouth and openSMILE toolkits to model the prosodic qualities of the speech.
+3.  **Cross-Attention Fusion Mechanism:** A Transformer-based architecture facilitates the fusion of these modalities. This mechanism allows the prosodic features to dynamically query the acoustic feature representations, thereby enabling the model to focus on the most salient spectral information within a given prosodic context.
 
-Figure 1: The proposed cross-attention model architecture for fusing CQCC and prosodic features.
+*Figure 1: The proposed cross-attention model architecture for fusing CQCC and prosodic features.*
 
-🗂️ Repository Structure
-Final_code.ipynb: The main Jupyter Notebook containing the complete pipeline, from data preprocessing and feature engineering to model training and evaluation.
+## 🗂️ Repository Contents
 
-best_simple_ffnn_static_spoofing_detector.pth: A saved PyTorch model checkpoint from one of the baseline experiments.
+* **`Final_code.ipynb`**: A Jupyter Notebook containing the end-to-end implementation of the experimental pipeline, including data preprocessing, feature engineering, model training, and subsequent evaluation.
+* **`best_simple_ffnn_static_spoofing_detector.pth`**: A serialized PyTorch model checkpoint from a baseline experiment.
+* **`Team_Lab_Paper.pdf`**: The formal research paper that details the project's methodology, experimental setup, and findings.
 
-Team_Lab_Paper.pdf: The research paper detailing the project's methodology, experiments, and findings.
+## 🛠️ Requirements
 
-🛠️ Requirements
-This project requires Python 3.x. You can install the necessary libraries using pip:
+This project requires Python 3.x. The necessary libraries can be installed via pip:
 
+```
 pip install torch pandas numpy librosa parselmouth opensmile audiomentations
+```
 
-🚀 How to Run
-Ensure you have all the required libraries installed.
+## 🚀 Execution Instructions
 
-Make sure the ASVspoof 2019 dataset is accessible at the path specified within the notebook.
-
-Open and run the cells in Final_code.ipynb to execute the data preprocessing, feature extraction, model training, and evaluation pipeline.
+1.  Ensure all library dependencies listed in the Requirements section are installed.
+2.  Confirm that the ASVspoof 2019 dataset is accessible at the path specified within the notebook.
+3.  Open and execute the cells in **`Final_code.ipynb`** to run the complete data preprocessing, feature extraction, model training, and evaluation pipeline.
