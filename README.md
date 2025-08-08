@@ -25,8 +25,7 @@ The core of the proposed methodology is a deep learning model engineered to proc
 ## 🗂️ Repository Contents
 
 * **`Final_code.ipynb`**: A Jupyter Notebook containing the end-to-end implementation of the experimental pipeline, including data preprocessing, feature engineering, model training, and subsequent evaluation.
-* **`best_simple_ffnn_static_spoofing_detector.pth`**: A serialized PyTorch model checkpoint from a baseline experiment.
-* **`Team_Lab_Paper.pdf`**: The formal research paper that details the project's methodology, experimental setup, and findings.
+* **`TransformerFusion_PyTorch_Best_Top6feat.pth`**: A serialized PyTorch model checkpoint for our proposed architecture.
 
 ## 🛠️ Requirements
 
