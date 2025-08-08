@@ -24,7 +24,7 @@ The core of the proposed methodology is a deep learning model engineered to proc
 
 ## 🗂️ Repository Contents
 
-* **`Final_code.ipynb`**: A Jupyter Notebook containing the end-to-end implementation of the experimental pipeline, including data preprocessing, feature engineering, model training, and subsequent evaluation.
+* **`final_code.ipynb`**: A Jupyter Notebook containing the end-to-end implementation of the experimental pipeline, including data preprocessing, feature engineering, model training, and subsequent evaluation.
 * **`TransformerFusion_PyTorch_Best_Top6feat.pth`**: A serialized PyTorch model checkpoint for our proposed architecture.
 
 ## 🛠️ Requirements
