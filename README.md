@@ -29,7 +29,7 @@ The core of the proposed methodology is a deep learning model engineered to proc
 
 ## 🛠️ Requirements
 
-This project requires Python 3.x. The necessary libraries can be installed via pip:
+This project requires Python 3.8 and above. The necessary libraries can be installed via pip:
 
 ```
 pip install torch pandas numpy librosa parselmouth opensmile audiomentations
